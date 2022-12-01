@@ -380,6 +380,8 @@ $('.hi span').on('click', function () {
 	var carousel = function() {
 		$('.home-slider').owlCarousel({
 	    loop:true,
+		mouseDrag: true,
+		touchDrag: false,
 	    autoplay: true,
 	    margin:0,
 	    animateIn: 'fadeIn',

@@ -7660,6 +7660,12 @@ h1, h2, h3, h4, h5,
     width: 60px;
     text-align: center;
     display: inline-block; }
+    
+ .owl-carousel .owl-stage,
+ .owl-carousel.owl-drag .owl-item {
+   -ms-touch-action: auto;
+   touch-action: auto;
+ }
 
 .bg-light {
   background: #fafafa !important; }
