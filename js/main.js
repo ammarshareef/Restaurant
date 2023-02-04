@@ -2,6 +2,9 @@ AOS.init({
  	duration: 800,
  	easing: 'slide'
  });
+
+
+
 (function ($) {
 	$.fn.floatingWhatsApp = function (options) {
 		var settings = $.extend({
@@ -628,4 +631,15 @@ $('.hi span').on('click', function () {
 
 
 })(jQuery);
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwaz4uXDjFpp4JH5UyjcLVDCbtLuimCT7-MDyAEYrXHuJp8Xo17reuviFPiVA7F3nBl/exec'
+const form = document.forms['submit-to-google-sheet']
+
+form.addEventListener('submit', e => {
+	e.preventDefault()
+	fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+		.then(response => alert('Thank You! Your Message Has been Sent', response))
+		.catch(error => console.error('Error!', error.message))
+	form.reset();
+})
 
